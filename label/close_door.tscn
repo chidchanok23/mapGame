@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://gq244e6xulnc"]
 
-[ext_resource type="FontFile" uid="uid://e3qhlmpt2k0x" path="res://font/CS_HorrorDemo.otf" id="1_jq2fj"]
+[ext_resource type="FontFile" uid="uid://b14vctlmmvb0r" path="res://font/KC Nightmare.ttf" id="1_cxmlr"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_y1l5f"]
-font = ExtResource("1_jq2fj")
-font_size = 140
+font = ExtResource("1_cxmlr")
+font_size = 120
 
 [node name="close_door" type="Control"]
 layout_mode = 3
@@ -16,10 +16,10 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 848.0
-offset_top = 295.0
-offset_right = 1050.0
-offset_bottom = 436.0
+offset_left = 833.0
+offset_top = 310.0
+offset_right = 1011.0
+offset_bottom = 372.0
 scale = Vector2(0.5, 0.5)
-text = "[i] Close"
+text = "[i] ปิด"
 label_settings = SubResource("LabelSettings_y1l5f")
