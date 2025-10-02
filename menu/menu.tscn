@@ -1,0 +1,113 @@
+[gd_scene load_steps=10 format=3 uid="uid://c40k8jugp5l0c"]
+
+[ext_resource type="Script" uid="uid://dck4yhwad25u1" path="res://menu/menu.gd" id="1_6nwqt"]
+[ext_resource type="Texture2D" uid="uid://dangc7o3tup7d" path="res://menu/mainmenu.png" id="1_g18jx"]
+[ext_resource type="FontFile" uid="uid://bxrcnifikqq60" path="res://assets/font/KC Nightmare.ttf" id="2_6nwqt"]
+[ext_resource type="PackedScene" uid="uid://b3qhbswrb77b2" path="res://menu/credit.tscn" id="2_pbjm4"]
+[ext_resource type="PackedScene" uid="uid://b74am5hx407og" path="res://menu/setting.tscn" id="2_svuvw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pbjm4"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_svuvw"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_juveg"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v6yed"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6nwqt")
+setting_scene = ExtResource("2_svuvw")
+credit_scene = ExtResource("2_pbjm4")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_g18jx")
+
+[node name="play" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 102.0
+offset_top = -1.0
+offset_right = 268.0
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_6nwqt")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_pbjm4")
+text = "PLAY"
+
+[node name="setting" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 102.0
+offset_top = 59.0
+offset_right = 268.0
+offset_bottom = 116.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_6nwqt")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_svuvw")
+text = "SETTING"
+
+[node name="credit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 102.0
+offset_top = 125.0
+offset_right = 268.0
+offset_bottom = 182.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_6nwqt")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_juveg")
+text = "CREDIT"
+
+[node name="exit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 102.0
+offset_top = 188.0
+offset_right = 268.0
+offset_bottom = 245.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_6nwqt")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_v6yed")
+text = "EXIT"
+
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="setting" to="." method="_on_setting_pressed"]
+[connection signal="pressed" from="credit" to="." method="_on_credit_pressed"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
